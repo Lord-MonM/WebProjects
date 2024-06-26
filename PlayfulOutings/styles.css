@@ -89,7 +89,8 @@ ul li ul.dropdown{
     display: none;
     transition: .1s;
 }
-ul li ul.dropdown li a{
+ul li ul.dropdown li{
+    padding: 20px;
     color: var(--thirdcolor);
 }
 .drop-down:hover ul.dropdown{
