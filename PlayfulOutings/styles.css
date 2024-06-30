@@ -139,12 +139,86 @@ ul li ul.dropdown li{
         left: 0;
     }
 }
-section{
-    background: url(images/homepage-img.jpg) no-repeat;
+.sec-img{
+    background:linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url(images/homepage-img.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px); 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
  }
 
+ .sec-img h1{
+    color: var(--secondclr);
+    font-size: 55px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+ }
+/* itinerary section  */
+#itinerary-section h2{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 30px;
+    color: var(--thirdcolor);
+}
+.container{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    margin: 10px;
+    background-color: var(--maincolor);
+    border-radius: 15px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.itinerary-img img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+.itinerary-card-body h4{
+    text-align: center;
+}
+.itinerary-card-body p{
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.itinerary-card-footer{
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+}
+.itinerary-card-footer .button{
+    
+    text-align: center;
+    width: 150px;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 6px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.itinerary-card-footer .button:hover{
+    background-color: var(--thirdcolor);
+    color: black;
+    border: 2px solid black;
+}
+.card:hover{
+    box-shadow: 3.9px 7.8px 7.8px hsl(0deg, 0%, 0% / 0.38);
+}
 /* footer */
 footer {
     background-color: var(--maincolor);
