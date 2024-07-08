@@ -6,7 +6,7 @@
     <title>PlayfulOutings</title>
     <!-- links -->
     <script src="app.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/1165876da6.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="icons/css/all.min.css">
     <!-- favicons -->
@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav>
+    <nav id="home">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
         <label ><img src="images/logo.webp" class="logo"></label>
@@ -25,25 +25,242 @@
         <ul class="navbar">
             <li ><a href="#">Home</a></li>
             <li class="drop-down">
-                <a href="#">Game Categories&#9662;</a>
+                <a href="#game-categories">Game Categories&#9662;</a>
                 <ul class="dropdown">
-                    <li><a href="#">Indoor Games</a></li>
-                    <li><a href="#">Outdoor Games</a></li>
-                    <li><a href="#">Games for males</a></li>
-                    <li><a href="#">Games for females</a></li>
-                    <li><a href="#">Family Games</a></li>
+                    <li><a href="#indoor-games">Indoor Games</a></li>
+                    <li><a href="#outdoor-games">Outdoor Games</a></li>
+                    <li><a href="#games-for-kids">Games for Kids</a></li>
+                    <li><a href="#games-for-males">Games for males</a></li>
+                    <li><a href="#games-for-females">Games for females</a></li>
+                    <li><a href="#family-games">Family Games</a></li>
                 </ul>
             </li>
             <li><a href="#itinerary-section">Itinerary Section</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>          
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>          
         </ul>
         <ul id="visitor">
             <li><a href="#" >Visitor Count: <span id="visitor-count"></span></a></li> 
         </ul>
     </nav>
     <section  class="sec-img"><h1>WELCOME TO PLAYFUL OUTINGS</h1></section>
+    
+      <!-- About Us Page -->
+      <div id="about-us" class="about-row">
+        <div class="about-img">
+            <img src="images/logo.webp" alt="">
+        </div>
+        <div class="about-wrapper">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Playful Outings</h2>
+                    <p>Playful outings are essential for both children and adults, offering opportunities for fun, relaxation, and bonding. These excursions can range from park visits and playground adventures to organized events and family picnics. Our mission is promoting engaging in playful activities as it fosters creativity, physical fitness, and emotional well-being, making them a vital part of a balanced life.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- game categories -->
 
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <!-- Introduction -->
+            <div id="game-categories" class="carousel-item item-1">
+                <h4>GAME CATEGORIES</h4>
+            </div>
+
+            <!-- Family Games -->
+            <div id="family-games" class="carousel-item">
+                <h4>Family Games</h4>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="category-card">
+                        <video src="assets/monopoly.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Monopoly</b></p>
+                        <p><b>Materials Needed:</b> Game Board, Cards, Deeds, Dice, Houses and Hotels, Fake Money<br>
+                        <b>Time Required:</b> 20 mins to 180 mins</p>
+                        <button><a href="https://www.hasbro.com/common/instruct/00009.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="category-card">
+                        <video src="assets/unogame.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Uno</b></p>
+                        <p><b>Materials Needed:</b> 108 cards: 25 for each RYGB color, action cards and wild cards<br>
+                        <b>Time Required:</b> 5 mins to 10 mins</p>
+                        <button><a href="https://www.unorules.org/wp-content/uploads/2021/03/Uno-Rules-PDF-Official-Rules-unorules.org_.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="category-card">
+                        <video src="assets/bingo.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Bingo</b></p>
+                        <p><b>Materials Needed:</b> Bingo number generator, Bingo ticket books, Bingo ball machine<br>
+                        <b>Time Required:</b> 4 mins to 10 mins</p>
+                        <button><a href="https://playgamingentertainment.com/wp-content/uploads/gameguide.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outdoor Games -->
+            <div id="outdoor-games" class="carousel-item">
+                <h4>Outdoor Games</h4>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="category-card">
+                        <video src="assets/hiking.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Hiking</b></p>
+                        <p><b>Materials Needed:</b> First aid, Sunscreen, hiking boots, hiking backpacks, food and Navigation<br>
+                        <b>Time Required:</b> A 6-mile hike with 2,000 feet in elevation gain should take 3 hours (2 hrs + 1 hr).</p>
+                        <button><a href="https://www.slideshare.net/slideshow/ultimate-guide-to-hiking-2023pdf/256787793" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="category-card">
+                        <video src="assets/kickball.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Kick Ball</b></p>
+                        <p><b>Materials Needed:</b> Kickball shoes, balls, sweatbands, team shirt and shorts, and water bottle<br>
+                        <b>Time Required:</b> 60 mins</p>
+                        <button><a href="http://www.bakeru.edu/images/pdf/BL_undergrad/Intramurals/Kickball_Rules.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="category-card">
+                        <video src="assets/hopscotch.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Hop Scotch</b></p>
+                        <p><b>Materials Needed:</b> Chalk, Marker, Pencil or pebble, A backyard, playground, patio, or a safe area where you can draw the pattern and start playing.<br>
+                        <b>Time Required:</b> 30 mins or more</p>
+                        <button><a href="https://iblog.dearbornschools.org/webbl/wp-content/uploads/sites/1205/2020/03/Hopscotch-rules.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indoor Games -->
+            <div id="indoor-games" class="carousel-item">
+                <h4>Indoor Games</h4>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="category-card">
+                        <video src="assets/Pictionary.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Pictionary</b></p>
+                        <p><b>Materials Needed:</b> Pen, paper and the board game Pictionary<br>
+                        <b>Time Required:</b> 60 mins to 120 mins</p>
+                        <button><a href="https://www.hasbro.com/common/instruct/pictionary.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="category-card">
+                        <video src="assets/snakeandladder.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Snake and Ladder</b></p>
+                        <p><b>Materials Needed:</b> Snakes & Ladders Board, Game Pieces (checkers, coins, blocks, etc.), Die.<br>
+                        <b>Time Required:</b> 30 mins</p>
+                        <button><a href="https://alzda.ca/wp-content/uploads/2022/04/4-Snakes-Ladders-Game.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="category-card">
+                        <video src="assets/scrabble.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Scrabble</b></p>
+                        <p><b>Materials Needed:</b> 1 game board, 100 wooden letter tiles from A-Z and some empty tiles, tile racks, drawstring letter bag<br>
+                        <b>Time Required:</b> 50 mins to 60 mins</p>
+                        <button><a href="https://www.hasbro.com/common/instruct/Scrabble_(2003).pdf" target="_blank">Instructions</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games for Females --> 
+            <div id="games-for-females" class="carousel-item">
+                <h4>Games for Females</h4>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="category-card">
+                        <video src="assets/mahjong.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Mahjong</b></p>
+                        <p><b>Materials Needed:</b> Mahjong tiles, 2 Dice (optional), 4 National Mah Jongg League Cards, 4 Racks & Pushers, Mahjong mat (optional)<br>
+                        <b>Time Required:</b> 120 mins</p>
+                        <button><a href="https://www.wtu3a.org.uk/wp-content/uploads/MahjongBookFinal-copy.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="category-card">
+                        <video src="assets/charades.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Charades</b></p>
+                        <p><b>Materials Needed:</b> a stopwatch or other timing device,a notepad and pencil for score keeping.</br>
+                        <b>Time Required:</b> 20 mins to 90 mins</p>
+                        <button><a href="https://childhood101.com/wp-content/uploads/2019/03/Easter-Charades-Childhood-101.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="category-card">
+                        <video src="assets/spades.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Spades</b></p>
+                        <p><b>Materials Needed:</b> A standard 52-card pack<br>
+                        <b>Time Required:</b> 60 mins</p>
+                        <button><a href="https://bicyclecards.com/wp-content/uploads/2019/06/Spades.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games for Males -->
+            <div id="games-for-males" class="carousel-item">
+                <h4>Games for Males</h4>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="category-card">
+                        <video src="assets/poker.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Poker</b></p>
+                        <p><b>Materials Needed:</b> Poker chips, A dealer button, Timer, Playing cards, Poker table and chairs<br>
+                        <b>Time Required:</b> 30 mins to 60 mins</p>
+                        <button><a href="https://www.poker.org/pdf/how-to-play-poker-for-beginners.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="category-card">
+                        <video src="assets/chess.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Chess</b></p>
+                        <p><b>Materials Needed:</b> Chessboard and chess pieces<br>
+                        <b>Time Required:</b> 10 mins to 30 mins</p>
+                        <button><a href="https://www.fide.com/FIDE/handbook/LawsOfChess.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="category-card">
+                        <video src="assets/checkers.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Checkers</b></p>
+                        <p><b>Materials Needed:</b> Checkerboard and checkers<br>
+                        <b>Time Required:</b> 20 mins to 40 mins</p>
+                        <button><a href="https://www.wcf3de.com/pdf/Checkers_rules.pdf" target="_blank">Instructions</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games for Kids -->
+        
+            <div class="carousel-item"> 
+                <h4>Games for Kids</h4>
+                <div id="games-for-kids" class="card-container">
+                    <!-- Card 1 -->
+                    <div class="category-card">
+                        <video src="assets/candyland.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Candy Land</b></p>
+                        <p><b>Materials Needed:</b> Game board, 4 tokens, 64 cards<br>
+                        <b>Time Required:</b> 15 mins</p>
+                        <button><a href="https://www.hasbro.com/common/instruct/CandyLand.PDF" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="category-card">
+                        <video src="assets/hideandseek.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Hide and Seek</b></p>
+                        <p><b>Materials Needed:</b> None<br>
+                        <b>Time Required:</b> 30 mins</p>
+                        <button><a href="https://www.funattic.com/hide-seek-rules/" target="_blank">Instructions</a></button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="category-card">
+                        <video src="assets/duckduckgoose.mp4" type="video/mp4" controls></video>
+                        <p><b>Name: Duck Duck Goose</b></p>
+                        <p><b>Materials Needed:</b> None<br>
+                        <b>Time Required:</b> 15 mins to 30 mins</p>
+                        <button><a href="https://www.activityvillage.co.uk/duck-duck-goose" target="_blank">Instructions</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control prev" onclick="moveCarousel(-1)"><!--&#10094;--></button>
+        <button class="carousel-control next" onclick="moveCarousel(1)"><!--&#10095;--></button>
+    </div>
+
+    <script src="script.js"></script>
      <!-- Itinerary Section -->
 <div id="itinerary-section"><h2>ITINERARY SECTION</h2></div>
 <div class="container">
@@ -57,7 +274,7 @@
             <p>Introducing THC Cinemax, an exciting and community-centric cinema destined to captivate hearts and minds. Nestled within the Heritage Centre, at the vibrant crossroads of Ifako-Ijaiye in Lagos, THC Cinemax is set to redefine cinematic experiences. Our mission? To uplift and engage our cherished audiences like never before.</p>
         </div>
         <div class="itinerary-card-footer">
-            <a href="" class="button">Explore more</a>
+            <a href="https://cinemaxthc.ng/" class="button">Explore more</a>
         </div>
     </div>
     <!-- card two -->
@@ -70,7 +287,7 @@
             <p>Our olympic-sized swimming pool for your relaxation is serviced by a bar and barbecue. Swimming is free for residents, but children under 13 years of age must be accompanied by adults.</p>
         </div>
         <div class="itinerary-card-footer">
-            <a href="" class="button">Explore more</a>
+            <a href="https://lagosairporthotel.com.ng/" class="button">Explore more</a>
         </div>
     </div>
     <!-- card three -->
@@ -83,14 +300,46 @@
             <p>Afefeyeye Restaurant is more than a culinary destination; it’s a celebration of Nigeria’s rich heritage and the magic that happens when tradition meets modernity.</p>
         </div>
         <div class="itinerary-card-footer">
-            <a href="" class="button">Explore more</a>
+            <a href="https://www.instagram.com/afefeyeye_restaurantandbar/?hl=en" class="button">Explore more</a>
         </div>
     </div>
 
 </div>
 
     <!-- footer -->
-    <footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3 id="contact-us">Contact us</h3>
+                <p>Email: Info@example.com</p>
+                <p>Phone: +121 56556 5555</p>
+                <p>Address: 103 Allen Ikeja avenue street</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="footer-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#game-categories">Game Categories</a></li>
+                    <li><a href="#itinerary-section">Itinerary Section</a></li>
+                    <li><a href="#about-us">About us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow us</h3>
+                <ul class="social-icons">
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                </ul> 
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy;2024 PlayfulOutings. All rights reserved </p>
+        </div>
+    </footer>
+    <footer class="ticker-section">
         <div class="ticker">
           Current date, time, and location: <span id="datetime-location"></span>
         </div>
