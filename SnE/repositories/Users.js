@@ -1,19 +1,23 @@
 import fs from "fs"
 import crypto from "crypto"
+import util from "util"
+
+const scrypt = util.promisify(crypto.scrypt)
 
 class UserRepository{
+
   constructor(filename){
     if(!file){
-     throw new Error('Creating a repository requires a filename')
+      throw new Error('Creating a repository requires a filename')
     }
 
     this.filename = filename;
     try{
-     fs.accessSync(this.filename)
+      fs.accessSync(this.filename)
     }catch{
-     fs.writeFileSync(this.filename, '[]')
+      fs.writeFileSync(this.filename, '[]')
     }
- }
+  }
 
   async getAll(){
     return JSON.parse(
@@ -23,14 +27,28 @@ class UserRepository{
 
   async create(attributes){
     attributes.id = this.randomId();
+    const salt = crypto.randomBytes(8).toString('hex')
+    const buf = await scrypt(attributes.password, salt, 64);
     const records = await this.getAll();
-    records.push(attributes);
+    const record = {
+      ...attributes, password: `${buf.toString('hex')}.${salt}`
+    }
+    records.push(record);
 
     await this.writeAll(records)
+
+    return record
+  }
+
+  async comparePasswords(saved, supplied){
+    const [hashed , salt] = saved.split('.');
+    const hashSuppliedBuf = scrypt(supplied, salt, 64);    
+    
+    return hashed === hashSuppliedBuf.toString('hex');
   }
 
   async writeAll(records){
-   await fs.promises.writeFile(this.filename, JSON.stringify(readFile, null, 2))
+    await fs.promises.writeFile(this.filename, JSON.stringify(readFile, null, 2))
   }
 
   randomId(){
@@ -43,9 +61,9 @@ class UserRepository{
   }
 
   async delete(id){
-   const records = await this.getAll();
-   const filteredRecords = records.filter(record => record.id !== id)
-   await this.writeAll(filteredRecords)
+    const records = await this.getAll();
+    const filteredRecords = records.filter(record => record.id !== id)
+    await this.writeAll(filteredRecords)
   }
 
   async update(id, attributes){
@@ -64,20 +82,20 @@ class UserRepository{
     const records = await this.getAll();
 
     for(let record of records){
-     let found = true;
+      let found = true;
 
       for(let key of filters){
         if(record[key] !== filters[key]){
-         found = false
+          found = false
         }
-     }
+      }
 
-     if(found){
-       return record;
-     }
+      if(found){
+        return record;
+      }
     }
   }
- 
+
 }
 
 export default new UserRepository("users.json")
